@@ -1,0 +1,8 @@
+.post-page__content h2 {
+  margin: 15px 0;
+}
+.post-page__content p {
+  font-size: 1.1rem;
+  line-height: 1.5rem;
+  margin: 7px 0;
+}

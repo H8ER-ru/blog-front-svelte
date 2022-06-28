@@ -1,0 +1,47 @@
+@font-face {
+  font-display: swap;
+  font-family: 'Nunito', sans-serif;
+  src: url('../static/font/Nunito-VariableFont_wght.ttf') format('ttf supports variations');
+  font-weight: 100 1000;
+  font-stretch: 25% 151%;
+}
+
+:root {
+  --red: #dd3333;
+}
+
+*, *:before, *:after {
+  box-sizing: border-box;
+  font-family: 'Nunito', sans-serif;
+  margin: 0;
+  padding: 0;
+  color: white;
+}
+body {
+  background: linear-gradient(to right,#181d20,#181d20);
+}
+
+input {
+  background: #181d20;;
+  color: white;
+  border: 1px solid #bbb8b8;
+}
+input::placeholder {
+  color: rgba(255,255,255, 0.5);
+}
+
+button {
+  background: var(--red);
+  border-radius: 5px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-width: min-content;
+  height: 40px;
+  padding: 5px;
+  border: 0;
+  cursor: pointer;
+}
+button:hover {
+
+}
