@@ -22,7 +22,7 @@ body {
 }
 
 input {
-  background: #181d20;;
+  background: #181d20;
   color: white;
   border: 1px solid #bbb8b8;
 }
@@ -30,18 +30,3 @@ input::placeholder {
   color: rgba(255,255,255, 0.5);
 }
 
-button {
-  background: var(--red);
-  border-radius: 5px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  min-width: min-content;
-  height: 40px;
-  padding: 5px;
-  border: 0;
-  cursor: pointer;
-}
-button:hover {
-
-}

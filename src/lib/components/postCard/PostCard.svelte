@@ -38,7 +38,7 @@
         alt="Календарь"
         style="margin-right: 5px"
       >
-      <time>
+      <time class="post-card__time">
         {dateToShow}
       </time>
       {#each tagsList as tag}
@@ -75,7 +75,7 @@
       align-items: center
 
     &__time
-      font-size: 12px
+      font-size: 14px
 
     &__text
       position: absolute

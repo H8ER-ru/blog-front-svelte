@@ -1,15 +1,25 @@
 <script context="module">
   import { BASE_MEDIA_URL } from "../../utils/variables.ts";
+  import { blur } from "svelte/transition";
+
   export async function load({ fetch, params }) {
     const url = `http://localhost:5000/posts/id/${params.id}`;
-    const response = await fetch(url).then(resp => resp.json());
+    try {
+      const response = await fetch(url).then(resp => resp.json());
 
-    console.log(response);
-    return {
-      props: {
-        post: response
+      console.log(response);
+      return {
+        props: {
+          post: response
+        }
+      };
+    } catch (e) {
+      return {
+        props: {
+          post: null
+        }
       }
-    };
+    }
   }
 </script>
 
@@ -29,41 +39,45 @@
   <title>Veras IT | {post.title}</title>
 </svelte:head>
 
-<div class="post-page">
-  <img
-    class="post-page__img"
-    src={`${BASE_MEDIA_URL}${post.image}`}
-    loading="lazy"
-    alt=""
+{#if post}
+  <div
+    class="post-page"
+    transition:blur={{ duration: 300}}
   >
-  <div class="post-page__info">
-    <div>
-      <p>{post.authorName}</p>
-      <div class="post-page__date">
-        <img
-          src={Calendar}
-          alt="Календарь"
-          loading="lazy"
-          width="16"
-          height="16"
-        >
-        <time>{dateToShow}</time>
+    <img
+      class="post-page__img"
+      src={`${BASE_MEDIA_URL}${post.image}`}
+      loading="lazy"
+      alt=""
+    >
+    <div class="post-page__info">
+      <div>
+        <p>{post.authorName}</p>
+        <div class="post-page__date">
+          <img
+            src={Calendar}
+            alt="Календарь"
+            loading="lazy"
+            width="16"
+            height="16"
+          >
+          <time>{dateToShow}</time>
+        </div>
+      </div>
+      <div class="post-page__tags">
+        {#each tagsList as tag}
+          <Tag
+            text={tag}
+          />
+        {/each}
       </div>
     </div>
-    <div class="post-page__tags">
-      {#each tagsList as tag}
-        <Tag
-          text={tag}
-        />
-      {/each}
+    <h1 class="post-page__title">{post.title}</h1>
+    <div class="post-page__content">
+      {@html postHtmlText}
     </div>
   </div>
-  <h1 class="post-page__title">{post.title}</h1>
-  <div class="post-page__content">
-    {@html postHtmlText}
-  </div>
-
-</div>
+{/if}
 
 <style type="text/sass">
   .post-page

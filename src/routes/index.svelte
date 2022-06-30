@@ -1,17 +1,27 @@
 <script context="module">
   export async function load({ fetch }) {
     const url = `http://localhost:5000/posts`;
-    const response = await fetch(url).then(resp => resp.json());
-    return {
-      props: {
-        posts: response
+    try {
+      const response = await fetch(url).then(resp => resp.json());
+      return {
+        props: {
+          posts: response
+        }
+      };
+    } catch (e) {
+      return  {
+        props: {
+          posts: []
+        }
       }
-    };
+    }
   }
 </script>
 
 <script>
   import PostCard from "../lib/components/postCard/PostCard.svelte";
+  import ErrorLoadPostPlaceholder from "../lib/components/ErrorLoadPostPlaceholder.svelte";
+
   export let posts
 </script>
 
@@ -20,9 +30,14 @@
 </svelte:head>
 
 <div class="post-wrapper">
-  {#each posts as post}
-    <PostCard {...post} />
-  {/each}
+  {#if posts.length}
+    {#each posts as post}
+      <PostCard {...post} />
+    {/each}
+  {/if}
+  {#if !posts.length}
+    <ErrorLoadPostPlaceholder/>
+  {/if}
 </div>
 
 <style type="text/sass">

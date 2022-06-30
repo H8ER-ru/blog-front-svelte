@@ -10,8 +10,14 @@ export const localStorageGet = (key: string): string | null => {
   return null;
 };
 
-export const localStorageSet = (key: string, value: string): void => {
-  if (browser) {
+export const localStorageSet = (key: string, value: string | null): void => {
+  if (browser && value) {
     localStorage.setItem(key, value);
   }
 };
+
+export const localStorageRemove = (key: string) : void => {
+  if(browser) {
+    localStorage.removeItem(key)
+  }
+}

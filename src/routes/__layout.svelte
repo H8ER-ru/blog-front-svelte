@@ -5,9 +5,15 @@
   import { fade } from 'svelte/transition'
   import { onMount } from "svelte";
   import {Modals} from "svelte-modals";
+  import { fetchUserData, loadingAuth } from "../store/UserStore.ts";
+  import { localStorageGet } from "../utils/requestUtils.ts";
 
-  onMount(() => {
-    console.log('mount');
+  onMount(async () => {
+    const token = localStorageGet('token')
+    if(token && token.length) {
+      await fetchUserData(token);
+    }
+    loadingAuth.set(false)
   })
 </script>
 
@@ -19,7 +25,8 @@
       slot="backdrop"
       class="backdrop"
       transition:fade
-    />
+    >
+    </div>
   </Modals>
 </main>
 <Footer/>

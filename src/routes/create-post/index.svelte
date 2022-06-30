@@ -2,7 +2,6 @@
   import { onMount, onDestroy } from 'svelte'
   import { Editor } from '@tiptap/core'
   import StarterKit from '@tiptap/starter-kit'
-
   let element
   let editor
   let img
@@ -49,7 +48,6 @@
       ],
       content: '<p>Hello World! 🌍️ </p>',
       onTransaction: () => {
-        // force re-render so `editor.isActive` works as expected
         editor = editor
       },
     })

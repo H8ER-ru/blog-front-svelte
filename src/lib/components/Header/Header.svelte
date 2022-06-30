@@ -1,10 +1,32 @@
 <script>
   import logo from '$lib/assets/img/Logo.png';
   import {openModal} from 'svelte-modals'
+  import BaseButton from "../UI/BaseButton.svelte";
+  import { authStore, loadingAuth, logOut } from "../../../store/UserStore.ts";
+  import { goto } from "$app/navigation";
+
+  let userData
+  let loadingAuthState
+  let isAdmin
+
+  loadingAuth.subscribe(value => loadingAuthState = value)
+  authStore.subscribe(value => {
+    userData = value;
+    let adminRole = false
+    value.roles.forEach(item => {
+      if(item.value === 'ADMIN') {
+        adminRole = true
+      }
+    })
+    isAdmin = adminRole
+  })
 
   const openAuthModal = () => {
-    console.log('open');
     openModal(() => import('$lib/components/AuthModal.svelte'), {})
+  }
+
+  const goToCreatePost = () => {
+    goto('/create-post')
   }
 </script>
 
@@ -26,8 +48,29 @@
       Veras IT
     </span>
   </a>
-  <div>
-    <button on:click={openAuthModal}>Авторизация</button>
+  <div class="header__user">
+    {#if !loadingAuthState}
+      {#if userData.isAuth}
+        <p class="header__name">{userData.username}</p>
+        <BaseButton
+          text="Выход"
+          on:click={logOut}
+        />
+      {/if}
+      {#if !userData.isAuth}
+        <BaseButton
+          text="Авторизация"
+          on:click={openAuthModal}
+        />
+      {/if}
+
+      {#if isAdmin}
+        <BaseButton
+          text="Добавить пост"
+          on:click={goToCreatePost}
+        />
+      {/if}
+    {/if}
   </div>
 </header>
 
@@ -41,6 +84,11 @@
     align-items: center
     justify-content: space-between
     padding: 5px 20px
+    &__user
+      display: flex
+      align-items: center
+    &__name
+      margin-right: 10px
     &__start
       font-size: 50px
       display: flex
