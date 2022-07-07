@@ -1,6 +1,7 @@
 <script context="module" lang="ts">
+  import { BASE_API_URL } from "../utils/variables";
   export async function load ({ fetch }) {
-    const url = 'http://localhost:5000/posts';
+    const url = `${BASE_API_URL}posts`;
     try {
       const response = await fetch(url).then(resp => resp.json());
       return {
