@@ -1,6 +1,6 @@
-<script context="module">
-  export async function load({ fetch }) {
-    const url = `http://localhost:5000/posts`;
+<script context="module" lang="ts">
+  export async function load ({ fetch }) {
+    const url = 'http://localhost:5000/posts';
     try {
       const response = await fetch(url).then(resp => resp.json());
       return {

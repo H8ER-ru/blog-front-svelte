@@ -1,6 +1,4 @@
 
-A
-package-lock.json,f/a/fa288d1472d29beccb489a676f68739ad365fc47
 G
 static/site.webmanifest,5/5/55a57cc923ba19c81de055afe52cfb5c7a3bb890
 \
@@ -13,8 +11,6 @@ G
 .npmrc,1/2/12453d06e6e35287172e482940b954ba12dc25a2
 ?
 .prettierignore,b/6/b69d8408b6c89ae66e712f0e6af68848291cfdfb
-<
-package.json,7/0/7030d0b2f71b999ff89a343de08c414af32fc93a
 ;
 .prettierrc,2/0/20137a9e94744624390b6748bc96df5ca1579b71
 :
@@ -24,10 +20,6 @@ T
 $.idea/codeStyles/codeStyleConfig.xml,d/d/dd7b3350c29c49497756c7f32c69a3bed18b1cba
 L
 .idea/codeStyles/Project.xml,6/e/6ecd6000a7b6f4a2884412ff19f74193ed089648
-=
-.eslintrc.cjs,e/3/e360fad5b6efa2ddba75769ed72a37505224b2ea
-<
-src/app.d.ts,5/0/50d669c9d022d89914a4c9c77a94171b6b438948
 <
 src/app.html,4/3/43f343fa8f8b3d19f33620db6bc88b192afa9d3d
 H
@@ -38,21 +30,27 @@ J
 src/utils/dateConverter.ts,c/2/c2a28b7033d5fcf44464b9bef8b92daf27a0f86f
 W
 'src/lib/components/Footer/Footer.svelte,1/2/12d5d337171449d733b184a77a5ccfb994f1db10
-D
-playwright.config.ts,0/4/0475c304a6e9877385b2ac4598949dcb7dd770e4
 9
 	README.md,8/e/8ec9a00bfd09b3190ac6b22251dbb1aa95a0579d
 L
 static/safari-pinned-tab.svg,7/3/73cffc26c96be74ef8aa2fcf40c6076517c25eba
-@
-svelte.config.js,9/4/9412e23d6c9b081f2298258aff5115cc43e3308e
 =
 tests/test.ts,8/3/834c525f489365c69e4eb71fdc5dcc3386ae3f6a
 P
  src/lib/components/UI/Tag.svelte,5/3/537da6055e1ced7878dd4e9a77568b40ebc8a41c
-N
-src/lib/assets/css/content.css,2/3/23d1952f37beedc9e6c9210047802a632fe95cb4
-4
-.env,3/c/3c84dcdc6bbe3d7817c49dcdc327b926fea1808a
-F
-src/utils/variables.ts,c/1/c110129f159bf1d60eda2d83f2779ed5629acfb2
+X
+(src/lib/components/UI/CloseButton.svelte,a/8/a8c82cf1d5836f5ee80ea3109b7aca9e0a0c2929
+b
+2src/lib/components/ErrorLoadPostPlaceholder.svelte,e/0/e02e381d7cf00daa23c2067e103dad6189f9c061
+P
+ src/lib/components/UI/Tab.svelte,b/6/b6bc7a8d7c45ef4427318cc40cf3a592740c599c
+H
+src/lib/assets/img/x.svg,5/c/5c0e58b244d130509afb99ed39b6abe04c474c8f
+<
+src/app.d.ts,5/0/50d669c9d022d89914a4c9c77a94171b6b438948
+;
+src/app.css,f/8/f84891de375015dbc3259b098070fffaa6c0752c
+T
+$src/lib/components/InputField.svelte,c/2/c28f82aabd2c655db827212109870d3f8cf6eca6
+W
+'src/lib/components/UI/BaseButton.svelte,b/b/bb32da37c10691c6d5291cc2851a7eada2228d3c

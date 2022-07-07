@@ -1,6 +1,6 @@
 import { writable } from "svelte/store";
 import { BASE_API_URL } from "../utils/variables";
-import { localStorageGet, localStorageRemove, localStorageSet } from "../utils/requestUtils";
+import { localStorageGet, localStorageRemove, localStorageSet } from "../utils/browserData";
 
 interface AuthStore {
   token: string | null
@@ -16,6 +16,13 @@ interface LoginCredentials {
   password: string
 }
 
+interface RegisterCredentials {
+  email: string
+  password: string
+  username: string
+}
+
+
 export const authStore = writable<AuthStore>({
   token: localStorageGet('token') || null,
   email: '',
@@ -27,10 +34,11 @@ export const authStore = writable<AuthStore>({
 
 export const loadingAuth = writable<boolean>(true)
 
-export const fetchUserData = async (token: string) => {
+export const fetchUserData = async (token: string, fetch?: any) => {
 
   const formData = new FormData()
   formData.append('token', token)
+  loadingAuth.set(true)
 
   try {
     const user = await fetch(
@@ -48,13 +56,15 @@ export const fetchUserData = async (token: string) => {
 
   } catch (e) {
     console.log(e);
-    authStore.update((e) => {
+    authStore.update((state) => {
       return {
-        ...e,
+        ...state,
         isAuth: false
       }
     })
     return e
+  } finally {
+    loadingAuth.set(false)
   }
 }
 
@@ -62,6 +72,7 @@ export const loginUser = async (loginCredentials: LoginCredentials) => {
   const formData = new FormData()
   formData.append('email', loginCredentials.email)
   formData.append('password', loginCredentials.password)
+  loadingAuth.set(true)
   try {
     const user = await fetch(
       `${BASE_API_URL}auth/login`,{
@@ -77,8 +88,37 @@ export const loginUser = async (loginCredentials: LoginCredentials) => {
     })
   } catch (e) {
     console.log(e);
+  } finally {
+    loadingAuth.set(false)
   }
 }
+
+export const registerUser = async (dto: RegisterCredentials) => {
+  const formData = new FormData()
+  formData.append('email', dto.email)
+  formData.append('password', dto.password)
+  formData.append('username', dto.username)
+  loadingAuth.set(true)
+  try {
+    const user = await fetch(
+      `${BASE_API_URL}auth/register`,{
+        method: 'POST',
+        body: formData,
+      }
+    );
+    const userData: AuthStore = await user.json()
+    localStorageSet('token', userData.token)
+    authStore.set({
+      ...userData,
+      isAuth: true
+    })
+  } catch (e) {
+    console.log(e);
+  } finally {
+    loadingAuth.set(false)
+  }
+}
+
 
 export const logOut = () => {
   authStore.set({

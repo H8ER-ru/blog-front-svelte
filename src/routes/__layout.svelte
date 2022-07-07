@@ -1,20 +1,26 @@
+<script context="module" lang="ts">
+  import { localStorageGet } from "../utils/browserData.ts";
+  import { fetchUserData, loadingAuth } from "../store/UserStore.ts";
+
+  export async function load ({fetch}) {
+    const token = localStorageGet('token')
+    if(token && token.length) {
+      await fetchUserData(token, fetch);
+    }
+    loadingAuth.set(false);
+    return {
+      data: 'hehe'
+    }
+  }
+</script>
+
 <script>
   import '../app.css'
   import Header from "../lib/components/Header/Header.svelte";
   import Footer from "../lib/components/Footer/Footer.svelte";
   import { fade } from 'svelte/transition'
-  import { onMount } from "svelte";
   import {Modals} from "svelte-modals";
-  import { fetchUserData, loadingAuth } from "../store/UserStore.ts";
-  import { localStorageGet } from "../utils/requestUtils.ts";
 
-  onMount(async () => {
-    const token = localStorageGet('token')
-    if(token && token.length) {
-      await fetchUserData(token);
-    }
-    loadingAuth.set(false)
-  })
 </script>
 
 <Header/>

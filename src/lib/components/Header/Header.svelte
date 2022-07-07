@@ -54,6 +54,7 @@
         <p class="header__name">{userData.username}</p>
         <BaseButton
           text="Выход"
+
           on:click={logOut}
         />
       {/if}
