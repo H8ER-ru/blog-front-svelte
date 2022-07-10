@@ -1,7 +1,6 @@
-<script context="module" lang="ts">
-  import type { Load } from "@sveltejs/kit";
+<script context="module" >
   import { BASE_API_URL } from "../utils/variables";
-  export const load: Load = async  ({ fetch }) => {
+  export const load = async ({ fetch }) => {
     const url = `${BASE_API_URL}posts`;
     try {
       const response = await fetch(url).then(resp => {
