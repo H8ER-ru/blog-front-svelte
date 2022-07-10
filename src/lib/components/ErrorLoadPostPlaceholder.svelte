@@ -13,8 +13,6 @@ import telegramImg from '$lib/assets/img/telegram.png'
   >
     <span>https://t.me/veras_it</span>
     <img
-      decoding="async"
-      loading="lazy"
       src={telegramImg}
       alt="Телеграм"
     >
