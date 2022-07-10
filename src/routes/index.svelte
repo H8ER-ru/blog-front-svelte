@@ -3,7 +3,11 @@
   export const load = async ({ fetch }) => {
     const url = `${BASE_API_URL}posts`;
     try {
-      const response = await fetch(url).then(resp => {
+      const response = await fetch(url, {
+        headers: {
+          'Content-Type': 'application/json'
+        },
+      }).then(resp => {
         return resp.json();
       });
       return {
