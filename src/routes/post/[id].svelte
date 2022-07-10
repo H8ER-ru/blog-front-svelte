@@ -1,13 +1,11 @@
 <script context="module">
-  import { BASE_MEDIA_URL } from "../../utils/variables.ts";
+  import { BASE_MEDIA_URL, BASE_API_URL } from "../../utils/variables.ts";
   import { blur } from "svelte/transition";
 
-  export async function load({ fetch, params }) {
-    const url = `http://localhost:5000/posts/id/${params.id}`;
+  export const load = async ({ fetch, params }) => {
+    const url = `${BASE_API_URL}posts/id/${params.id}`;
     try {
       const response = await fetch(url).then(resp => resp.json());
-
-      console.log(response);
       return {
         props: {
           post: response
