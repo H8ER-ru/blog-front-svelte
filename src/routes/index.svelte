@@ -3,12 +3,12 @@
   export async function load ({ fetch }) {
     const url = `${BASE_API_URL}posts`;
     try {
+      console.log(url);
       const response = await fetch(url).then(resp => {
         console.log(resp);
         console.log(resp.body);
         return resp.json();
       });
-      console.log();
       return {
         props: {
           posts: response
