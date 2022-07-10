@@ -4,14 +4,12 @@
     const url = `${BASE_API_URL}posts`;
     try {
       const response = await fetch(url).then(resp => resp.json());
-      console.log(response);
       return {
         props: {
           posts: response
         }
       };
     } catch (e) {
-      console.log(e);
       return  {
         props: {
           posts: []
