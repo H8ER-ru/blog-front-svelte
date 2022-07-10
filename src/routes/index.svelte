@@ -5,8 +5,9 @@
     try {
       const response = await fetch(url, {
         headers: {
-          'Content-Type': 'application/json'
+          'Content-Type': 'application/json; charset=utf-8',
         },
+        mode: 'cors'
       }).then(resp => {
         return resp.json();
       });
