@@ -4,9 +4,9 @@
     const url = `${BASE_API_URL}posts`;
     try {
       const response = await fetch(url, {
-        headers: {
-          'Content-Type': 'application/json; charset=utf-8',
-        },
+        mode: 'cors',
+        cache: 'no-cache',
+        credentials: 'same-origin'
       })
       const text = await response.text()
       const posts = JSON.parse(text);

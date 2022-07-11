@@ -3,8 +3,6 @@ G
 static/site.webmanifest,5/5/55a57cc923ba19c81de055afe52cfb5c7a3bb890
 \
 ,.idea/inspectionProfiles/Project_Default.xml,4/9/496a238a6afa168dbaf6efd37bb459331589579c
-=
-.eslintignore,8/8/88939cd7e826eac4f61dd9adac091b9d64277287
 6
 .npmrc,1/2/12453d06e6e35287172e482940b954ba12dc25a2
 ?
