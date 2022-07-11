@@ -9,8 +9,10 @@
         },
         mode: 'cors'
       })
+      console.log(response);
       const text = await response.text()
-      const posts = JSON.parse(text)
+      console.log(text);
+      const posts = JSON.parse(text);
       return {
         props: {
           posts
