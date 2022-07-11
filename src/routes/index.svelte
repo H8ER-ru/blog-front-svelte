@@ -1,7 +1,6 @@
 <script context="module" >
   import { BASE_API_URL } from "../utils/variables";
   export const load = async ({ fetch }) => {
-    console.log(fetch);
     const url = `${BASE_API_URL}posts`;
     try {
       const response = await fetch(url, {
@@ -9,12 +8,12 @@
           'Content-Type': 'application/json; charset=utf-8',
         },
         mode: 'cors'
-      }).then(resp => {
-        return resp.json();
-      });
+      })
+      const text = await response.text()
+      const posts = JSON.parse(text)
       return {
         props: {
-          posts: response
+          posts
         }
       };
     } catch (e) {
