@@ -11,9 +11,6 @@ G
 .prettierignore,b/6/b69d8408b6c89ae66e712f0e6af68848291cfdfb
 ;
 .prettierrc,2/0/20137a9e94744624390b6748bc96df5ca1579b71
-:
-
-.gitignore,a/5/a5cc2925ca8258af241be7e5b0381edf30266302
 T
 $.idea/codeStyles/codeStyleConfig.xml,d/d/dd7b3350c29c49497756c7f32c69a3bed18b1cba
 L
@@ -54,8 +51,6 @@ D
 playwright.config.ts,0/4/0475c304a6e9877385b2ac4598949dcb7dd770e4
 H
 src/utils/browserData.ts,b/d/bd84d07283705bd2afccc879ea4beb9f47ef8416
-W
-'src/lib/components/Header/Header.svelte,6/9/695ced32f13ed9573ecd4a6f07b30092998ad925
 K
 src/lib/routeGuard/index.ts,7/b/7b5ab7f9fa79739788814bf97fea1e11318b3dbd
 J
@@ -72,9 +67,16 @@ S
 build/index.js,b/1/b13e722c22b8ed4288d9972d92b260aee6cffbf9
 A
 package-lock.json,f/a/fa288d1472d29beccb489a676f68739ad365fc47
-<
-package.json,7/0/7030d0b2f71b999ff89a343de08c414af32fc93a
 @
 svelte.config.js,9/4/9412e23d6c9b081f2298258aff5115cc43e3308e
 =
 tests/test.ts,8/3/834c525f489365c69e4eb71fdc5dcc3386ae3f6a
+Y
+)src/lib/components/Forms/LoginForm.svelte,0/9/09e9c236c3190b8be333798ee616d4d63d602117
+:
+
+.gitignore,a/5/a5cc2925ca8258af241be7e5b0381edf30266302
+F
+src/utils/variables.ts,c/1/c110129f159bf1d60eda2d83f2779ed5629acfb2
+<
+package.json,7/0/7030d0b2f71b999ff89a343de08c414af32fc93a

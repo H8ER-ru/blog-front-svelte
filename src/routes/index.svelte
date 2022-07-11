@@ -1,6 +1,7 @@
 <script context="module" >
   import { BASE_API_URL } from "../utils/variables";
   export const load = async ({ fetch }) => {
+    console.log(fetch);
     const url = `${BASE_API_URL}posts`;
     try {
       const response = await fetch(url, {
@@ -17,6 +18,7 @@
         }
       };
     } catch (e) {
+      console.log(e);
       return  {
         props: {
           posts: []
