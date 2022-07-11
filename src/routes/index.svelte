@@ -7,11 +7,8 @@
         headers: {
           'Content-Type': 'application/json; charset=utf-8',
         },
-        mode: 'cors'
       })
-      console.log(response);
       const text = await response.text()
-      console.log(text);
       const posts = JSON.parse(text);
       return {
         props: {
@@ -19,7 +16,6 @@
         }
       };
     } catch (e) {
-      console.log(e);
       return  {
         props: {
           posts: []
