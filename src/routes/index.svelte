@@ -3,13 +3,12 @@
   export const load = async ({ fetch }) => {
     const url = `${BASE_API_URL}posts`;
     try {
-      const response = await fetch(url, {
-        mode: 'cors',
-        cache: 'no-cache',
-        credentials: 'same-origin'
-      })
+      const response = await fetch(url)
+      console.log(response);
       const text = await response.text()
+      console.log(text);
       const posts = JSON.parse(text);
+      console.log(posts);
       return {
         props: {
           posts
