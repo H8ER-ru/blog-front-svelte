@@ -2,6 +2,7 @@
   import { BASE_API_URL } from "../utils/variables";
   export const load = async ({ fetch }) => {
     const url = `${BASE_API_URL}posts`;
+    console.log(url);
     try {
       const response = await fetch(url)
       console.log(response);
