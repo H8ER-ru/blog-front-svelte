@@ -15,6 +15,7 @@
         }
       };
     } catch (e) {
+      console.log(e);
       return  {
         props: {
           posts: []

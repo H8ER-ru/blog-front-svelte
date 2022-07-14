@@ -78,3 +78,7 @@ F
 src/utils/variables.ts,c/1/c110129f159bf1d60eda2d83f2779ed5629acfb2
 <
 package.json,7/0/7030d0b2f71b999ff89a343de08c414af32fc93a
+=
+.eslintignore,8/8/88939cd7e826eac4f61dd9adac091b9d64277287
+4
+.env,3/c/3c84dcdc6bbe3d7817c49dcdc327b926fea1808a
