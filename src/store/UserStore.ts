@@ -9,7 +9,14 @@ interface AuthStore {
   roles: []
   username: string
   isAuth: boolean
+
 }
+
+interface AuthResponse extends AuthStore {
+  error?: boolean
+  message?: string
+}
+
 
 interface LoginCredentials {
   email: string
@@ -80,14 +87,29 @@ export const loginUser = async (loginCredentials: LoginCredentials) => {
         body: formData,
       }
     );
-    const userData: AuthStore = await user.json()
-    localStorageSet('token', userData.token)
-    authStore.set({
-      ...userData,
-      isAuth: true
-    })
-  } catch (e) {
-    console.log(e);
+    const userData: AuthResponse = await user.json()
+    console.log(userData);
+    if(!userData.error) {
+      localStorageSet('token', userData.token)
+      authStore.set({
+        ...userData,
+        isAuth: true
+      })
+      return {
+        success: true
+      }
+    }
+    return  {
+      error: userData.message,
+      success: false
+    }
+
+  } catch (error) {
+    console.log(error);
+    return {
+      success: false,
+      error: error
+    }
   } finally {
     loadingAuth.set(false)
   }
@@ -106,14 +128,29 @@ export const registerUser = async (dto: RegisterCredentials) => {
         body: formData,
       }
     );
-    const userData: AuthStore = await user.json()
-    localStorageSet('token', userData.token)
-    authStore.set({
-      ...userData,
-      isAuth: true
-    })
-  } catch (e) {
-    console.log(e);
+    const userData: AuthResponse = await user.json()
+    console.log(userData);
+    if(!userData.error) {
+      localStorageSet('token', userData.token)
+      authStore.set({
+        ...userData,
+        isAuth: true
+      })
+      return {
+        success: true
+      }
+    }
+    return  {
+      error: userData.message,
+      success: false
+    }
+
+  } catch (error) {
+    console.log(error);
+    return {
+      success: false,
+      error: error
+    }
   } finally {
     loadingAuth.set(false)
   }

@@ -9,7 +9,7 @@ const config = {
 	kit: {
 		adapter: adapter({
 			out: 'build',
-			precompress: false,
+			precompress: 'brotli',
 			envPrefix: 'VITE_'
 		})
 	}

@@ -35,10 +35,10 @@
           text="Зарегистрироваться"/>
       </div>
       {#if activeTab === 'login'}
-        <LoginForm/>
+        <LoginForm on:success={closeModal}/>
       {/if}
       {#if activeTab === 'register'}
-        <RegisterForm/>
+        <RegisterForm on:success={closeModal}/>
       {/if}
     </div>
   </div>
@@ -60,8 +60,6 @@
     justify-content: center
     align-items: center
     pointer-events: none
-
-
 
   .auth-modal
     width: 400px

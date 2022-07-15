@@ -9,11 +9,15 @@
   let loadingAuthState
   let isAdmin
 
-  loadingAuth.subscribe(value => loadingAuthState = value)
+  loadingAuth.subscribe(value => {
+    if(value !== loadingAuthState) {
+      loadingAuthState = value
+    }
+  })
   authStore.subscribe(value => {
     userData = value;
     let adminRole = false
-    value.roles.forEach(item => {
+    value.roles && value.roles.forEach(item => {
       if(item.value === 'ADMIN') {
         adminRole = true
       }

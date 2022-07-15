@@ -2,7 +2,9 @@
 import InputField from "../InputField.svelte";
 import BaseButton from "../UI/BaseButton.svelte";
 import { registerUser } from "../../../store/UserStore.ts";
-import { closeModal } from "svelte-modals";
+import { createEventDispatcher } from "svelte";
+
+const dispatch = createEventDispatcher()
 
 let emailValue = ''
 let passwordValue = ''
@@ -13,9 +15,13 @@ let loading = false
 const registerHandler = async (e) => {
   e.preventDefault()
   loading = true
-  await registerUser({email: emailValue, password: passwordValue, username: usernameValue})
+  const register = await registerUser({email: emailValue, password: passwordValue, username: usernameValue})
+  if(register.success) {
+    dispatch('success')
+  } else {
+    console.log(register.error)
+  }
   loading = false
-  closeModal()
 }
 
 
