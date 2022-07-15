@@ -40,6 +40,7 @@
 
 <svelte:head>
   <title>Veras IT | Главная</title>
+  <meta name="description" content="Блог о фронтенде и не только. Создатель - Верас Никита">
 </svelte:head>
 
 <div class="post-wrapper">

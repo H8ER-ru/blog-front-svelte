@@ -13,8 +13,6 @@ T
 $.idea/codeStyles/codeStyleConfig.xml,d/d/dd7b3350c29c49497756c7f32c69a3bed18b1cba
 L
 .idea/codeStyles/Project.xml,6/e/6ecd6000a7b6f4a2884412ff19f74193ed089648
-<
-src/app.html,4/3/43f343fa8f8b3d19f33620db6bc88b192afa9d3d
 H
 static/browserconfig.xml,2/b/2b3f58e9d9eb42a7f05d289670454e19aed55008
 O
@@ -33,10 +31,6 @@ P
  src/lib/components/UI/Tab.svelte,b/6/b6bc7a8d7c45ef4427318cc40cf3a592740c599c
 H
 src/lib/assets/img/x.svg,5/c/5c0e58b244d130509afb99ed39b6abe04c474c8f
-<
-src/app.d.ts,5/0/50d669c9d022d89914a4c9c77a94171b6b438948
-;
-src/app.css,f/8/f84891de375015dbc3259b098070fffaa6c0752c
 T
 $src/lib/components/InputField.svelte,c/2/c28f82aabd2c655db827212109870d3f8cf6eca6
 W

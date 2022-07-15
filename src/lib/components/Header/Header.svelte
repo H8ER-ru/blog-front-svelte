@@ -36,7 +36,6 @@
     href="/"
   >
     <img
-      loading="lazy"
       src={logo}
       alt="Мопс за ноутбуком"
     >
