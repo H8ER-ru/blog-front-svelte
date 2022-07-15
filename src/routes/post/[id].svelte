@@ -45,8 +45,7 @@
     <img
       class="post-page__img"
       src={`${BASE_MEDIA_URL}${post.image}`}
-      loading="lazy"
-      alt=""
+      alt={post.title}
     >
     <div class="post-page__info">
       <div>
@@ -86,10 +85,16 @@
     max-width: 900px
     margin: 0 auto
     border-radius: 5px
+    @media (max-width: 900px)
+      max-width: 100%
+      padding: 25px
     &__title
       font-size: 42px
       line-height: 1.2
       margin-bottom: 20px
+      @media (max-width: 900px)
+        font-size: 32px
+        margin-top: 10px
 
     &__img
 
@@ -98,6 +103,9 @@
       display: block
       max-width: 500px
       margin: 0 auto 20px
+      @media (max-width: 700px)
+        max-height: 250px
+        max-width: 100%
 
     &__info
       display: flex

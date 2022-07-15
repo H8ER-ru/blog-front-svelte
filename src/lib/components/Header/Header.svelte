@@ -32,11 +32,10 @@
 
 <header class="header">
   <a
-    class="header__start "
+    class="header__start"
     href="/"
   >
     <img
-      height="80"
       loading="lazy"
       src={logo}
       alt="Мопс за ноутбуком"
@@ -84,7 +83,7 @@
     display: flex
     align-items: center
     justify-content: space-between
-    padding: 5px 20px
+    padding: 10px 20px
     &__user
       display: flex
       align-items: center
@@ -95,9 +94,14 @@
       display: flex
       align-items: center
       text-decoration: none
+      @media (max-width: 500px)
+        font-size: 32px
 
     img
       margin-right: 5px
+      height: 80px
+      @media (max-width: 500px)
+        height: 60px
 
     .glitch
       position: relative

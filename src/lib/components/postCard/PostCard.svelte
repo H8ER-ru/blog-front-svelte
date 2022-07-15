@@ -10,10 +10,12 @@
   export let tags
   export let id
   export let createdAt
+  export let index
   const dateToShow = dateConverter(createdAt)
   const goToPost = () => {
     return goto(`/post/${id}`)
   }
+  console.log(index);
 
   const tagsList = tags.replaceAll('"', '').split(', ')
 
@@ -26,13 +28,13 @@
     class="post-card__img"
     src={`${BASE_MEDIA_URL}${image}`}
     alt={title}
-    decoding="async"
-    loading="lazy">
+    decoding={index > 1 ? 'async' : 'auto'}
+    loading={index > 1 ? 'lazy' : 'eager'}
+  >
   <div class="post-card__text">
     <div class="post-card__info">
       <img
         src={Calendar}
-        loading="lazy"
         width="16"
         height="16"
         alt="Календарь"

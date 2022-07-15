@@ -2,13 +2,9 @@
   import { BASE_API_URL } from "../utils/variables";
   export const load = async ({ fetch }) => {
     const url = `${BASE_API_URL}posts`;
-    console.log(url);
     try {
       const response = await fetch(url)
-      console.log(response);
-      const text = await response.text()
-      console.log(text);
-      const posts = JSON.parse(text);
+      const posts = await response.json()
       console.log(posts);
       return {
         props: {
@@ -16,7 +12,6 @@
         }
       };
     } catch (e) {
-      console.log(e);
       return  {
         props: {
           posts: []
@@ -28,9 +23,19 @@
 
 <script>
   import PostCard from "../lib/components/postCard/PostCard.svelte";
-  import ErrorLoadPostPlaceholder from "../lib/components/ErrorLoadPostPlaceholder.svelte";
+  import { onMount } from "svelte";
 
   export let posts
+  let ErrorComponent = null
+  onMount(async() => {
+    if(!posts.length) {
+      try {
+        ErrorComponent = (await import('../lib/components/ErrorLoadPostPlaceholder.svelte')).default
+      } catch (e) {
+        console.log(e);
+      }
+    }
+  })
 </script>
 
 <svelte:head>
@@ -39,12 +44,12 @@
 
 <div class="post-wrapper">
   {#if posts.length}
-    {#each posts as post}
-      <PostCard {...post} />
+    {#each posts as post, index}
+      <PostCard {...post} index={index} />
     {/each}
   {/if}
   {#if !posts.length}
-    <ErrorLoadPostPlaceholder/>
+    <svelte:component this={ErrorComponent}/>
   {/if}
 </div>
 

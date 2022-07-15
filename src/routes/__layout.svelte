@@ -45,6 +45,10 @@
     padding: 0 1rem;
     height: 100%;
     min-height: 100%;
+    @media (max-width: 1200px) {
+      max-width: 100%;
+      padding: 0;
+    }
   }
   .backdrop {
     position: fixed;
