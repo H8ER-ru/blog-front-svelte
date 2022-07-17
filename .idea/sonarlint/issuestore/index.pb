@@ -19,8 +19,6 @@ O
 src/lib/assets/img/calendar.svg,1/c/1caca861a59305973c1443474f287d025e30c79f
 J
 src/utils/dateConverter.ts,c/2/c2a28b7033d5fcf44464b9bef8b92daf27a0f86f
-W
-'src/lib/components/Footer/Footer.svelte,1/2/12d5d337171449d733b184a77a5ccfb994f1db10
 L
 static/safari-pinned-tab.svg,7/3/73cffc26c96be74ef8aa2fcf40c6076517c25eba
 P
@@ -39,8 +37,6 @@ N
 src/lib/assets/css/content.css,2/3/23d1952f37beedc9e6c9210047802a632fe95cb4
 =
 .eslintrc.cjs,e/3/e360fad5b6efa2ddba75769ed72a37505224b2ea
-D
-playwright.config.ts,0/4/0475c304a6e9877385b2ac4598949dcb7dd770e4
 H
 src/utils/browserData.ts,b/d/bd84d07283705bd2afccc879ea4beb9f47ef8416
 K
@@ -57,10 +53,15 @@ A
 package-lock.json,f/a/fa288d1472d29beccb489a676f68739ad365fc47
 =
 tests/test.ts,8/3/834c525f489365c69e4eb71fdc5dcc3386ae3f6a
-:
-
-.gitignore,a/5/a5cc2925ca8258af241be7e5b0381edf30266302
 <
 package.json,7/0/7030d0b2f71b999ff89a343de08c414af32fc93a
 =
 .eslintignore,8/8/88939cd7e826eac4f61dd9adac091b9d64277287
+F
+src/utils/variables.ts,c/1/c110129f159bf1d60eda2d83f2779ed5629acfb2
+b
+2src/lib/components/ErrorLoadPostPlaceholder.svelte,e/0/e02e381d7cf00daa23c2067e103dad6189f9c061
+;
+src/app.css,f/8/f84891de375015dbc3259b098070fffaa6c0752c
+<
+src/app.html,4/3/43f343fa8f8b3d19f33620db6bc88b192afa9d3d

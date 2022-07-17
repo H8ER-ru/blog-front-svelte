@@ -60,4 +60,7 @@
     gap: 15px
     justify-content: center
     align-items: center
+    @media (max-width: 900px)
+      margin: 0 15px
+
 </style>
