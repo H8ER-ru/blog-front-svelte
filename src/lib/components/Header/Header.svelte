@@ -8,6 +8,7 @@
   let userData
   let loadingAuthState
   let isAdmin
+  let showMobileBurger
 
   loadingAuth.subscribe(value => {
     if(value !== loadingAuthState) {
@@ -32,6 +33,11 @@
   const goToCreatePost = () => {
     goto('/create-post')
   }
+
+  const toggleMobileBurger = () => {
+    showMobileBurger = !showMobileBurger
+  }
+
 </script>
 
 <header class="header">
@@ -50,31 +56,50 @@
       Veras IT
     </span>
   </a>
-  <div class="header__user">
-    {#if !loadingAuthState}
-      {#if userData.isAuth}
-        <p class="header__name">{userData.username}</p>
-        <BaseButton
-          text="Выход"
+  <div
+    class="header__user"
+    class:header__user--show={showMobileBurger}
+    >
+      <div class="header__menu">
+        <button on:click={toggleMobileBurger} class="header__close">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#ffffff" xmlns="http://www.w3.org/2000/svg">
+            <path d="M5 5L19 19" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+            <path d="M19 5L5 19" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
 
-          on:click={logOut}
-        />
-      {/if}
-      {#if !userData.isAuth}
-        <BaseButton
-          text="Авторизация"
-          on:click={openAuthModal}
-        />
-      {/if}
+        </button>
+        {#if !loadingAuthState}
+          {#if userData.isAuth}
+            <p class="header__name">{userData.username}</p>
+            <BaseButton
+              text="Выход"
+              on:click={logOut}
+            />
+          {/if}
+          {#if !userData.isAuth}
+            <BaseButton
+              text="Авторизация"
+              on:click={openAuthModal}
+            />
+          {/if}
 
-      {#if isAdmin}
-        <BaseButton
-          text="Добавить пост"
-          on:click={goToCreatePost}
-        />
-      {/if}
-    {/if}
+          {#if isAdmin}
+            <BaseButton
+              text="Добавить пост"
+              on:click={goToCreatePost}
+            />
+          {/if}
+        {/if}
+      </div>
   </div>
+  <button
+    on:click={toggleMobileBurger}
+    class="header__burger"
+  >
+    <span></span>
+    <span></span>
+    <span></span>
+  </button>
 </header>
 
 
@@ -87,9 +112,62 @@
     align-items: center
     justify-content: space-between
     padding: 10px 20px
+
+    &__burger
+      display: none
+      flex-direction: column
+      justify-content: space-between
+      width: 20px
+      height: 20px
+      background: transparent
+      border: 0
+      @media (max-width: 1024px)
+        display: flex
+      span
+        width: 20px
+        height: 2px
+        background: red
+
     &__user
       display: flex
       align-items: center
+      &--show
+        display: flex !important
+      @media (max-width: 1024px)
+        display: none
+        flex-direction: column
+        align-items: end
+
+        position: absolute
+        right: 0
+        top: 0
+        left: 0
+        bottom: 0
+        z-index: 5
+
+    &__menu
+      display: flex
+      align-items: center
+      gap: 10px
+      @media (max-width: 1024px)
+        flex-direction: column
+        align-items: flex-end
+        gap: 20px
+        background: #2d2d2d;
+        padding-top: 20px
+        padding-right: 30px
+        width: 100%
+        height: 100%
+    &__close
+      display: none
+      @media (max-width: 1024px)
+        display: flex
+        align-items: center
+        justify-content: center
+        width: 30px
+        height: 30px
+        background: transparent
+        border: 0
     &__name
       margin-right: 10px
     &__start

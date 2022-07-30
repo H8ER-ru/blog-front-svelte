@@ -41,27 +41,23 @@ H
 src/utils/browserData.ts,b/d/bd84d07283705bd2afccc879ea4beb9f47ef8416
 K
 src/lib/routeGuard/index.ts,7/b/7b5ab7f9fa79739788814bf97fea1e11318b3dbd
-S
-#src/routes/create-post/index.svelte,f/9/f95ea7970b1fb19663dc20bb308fa5d0e2f6bbed
-9
-	README.md,8/e/8ec9a00bfd09b3190ac6b22251dbb1aa95a0579d
 =
 tsconfig.json,6/1/61ebb9fd6e8cf9082658121d5d81e297791dacd0
->
-build/index.js,b/1/b13e722c22b8ed4288d9972d92b260aee6cffbf9
 A
 package-lock.json,f/a/fa288d1472d29beccb489a676f68739ad365fc47
 =
 tests/test.ts,8/3/834c525f489365c69e4eb71fdc5dcc3386ae3f6a
-<
-package.json,7/0/7030d0b2f71b999ff89a343de08c414af32fc93a
 =
 .eslintignore,8/8/88939cd7e826eac4f61dd9adac091b9d64277287
-F
-src/utils/variables.ts,c/1/c110129f159bf1d60eda2d83f2779ed5629acfb2
 b
 2src/lib/components/ErrorLoadPostPlaceholder.svelte,e/0/e02e381d7cf00daa23c2067e103dad6189f9c061
 ;
 src/app.css,f/8/f84891de375015dbc3259b098070fffaa6c0752c
+9
+	README.md,8\e\8ec9a00bfd09b3190ac6b22251dbb1aa95a0579d
+F
+src/utils/variables.ts,c\1\c110129f159bf1d60eda2d83f2779ed5629acfb2
 <
-src/app.html,4/3/43f343fa8f8b3d19f33620db6bc88b192afa9d3d
+package.json,7\0\7030d0b2f71b999ff89a343de08c414af32fc93a
+<
+src/app.html,4\3\43f343fa8f8b3d19f33620db6bc88b192afa9d3d
