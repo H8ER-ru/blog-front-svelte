@@ -20,6 +20,9 @@
   import Footer from "../lib/components/Footer/Footer.svelte";
   import { fade } from 'svelte/transition'
   import {Modals} from "svelte-modals";
+  import sentry from '../utils/sentry'
+
+  sentry()
 
 </script>
 
