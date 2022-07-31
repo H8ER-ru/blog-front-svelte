@@ -61,3 +61,22 @@ F
 src/utils/variables.ts,c\1\c110129f159bf1d60eda2d83f2779ed5629acfb2
 L
 .github/workflows/deploy.yml,f\1\f130ad0d1d16d0d70ec30d355f736ae3784b05cf
+C
+src/utils/sentry.js,7\4\7445f37f10d222940e41e2e6e4568343fdcab9c0
+G
+src/routes/index.svelte,5\1\51bcc514dca4100151288caa29d812033b5c875a
+A
+package-lock.json,f\a\fa288d1472d29beccb489a676f68739ad365fc47
+J
+src/utils/dateConverter.ts,c\2\c2a28b7033d5fcf44464b9bef8b92daf27a0f86f
+:
+
+.gitignore,a\5\a5cc2925ca8258af241be7e5b0381edf30266302
+;
+src/app.css,f\8\f84891de375015dbc3259b098070fffaa6c0752c
+W
+'src/lib/components/Header/Header.svelte,6\9\695ced32f13ed9573ecd4a6f07b30092998ad925
+W
+'src/lib/components/Footer/Footer.svelte,1\2\12d5d337171449d733b184a77a5ccfb994f1db10
+J
+src/routes/__layout.svelte,a\4\a40b258bf0b50036f6b968be9525971d8531305d

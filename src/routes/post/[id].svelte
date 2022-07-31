@@ -137,4 +137,6 @@
           margin: 7px 0
         h2
           margin: 15px 0 7px 0
+        a
+          color: blueviolet
 </style>

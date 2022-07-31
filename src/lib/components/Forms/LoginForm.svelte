@@ -16,7 +16,6 @@ const submitHandler = async (e) => {
   e.preventDefault()
   loading = true
   const login = await loginUser({email:emailValue, password: passwordValue})
-  console.log(login);
   if(login.success) {
     dispatch('success')
   } else {
