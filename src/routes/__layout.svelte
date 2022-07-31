@@ -9,7 +9,7 @@
     }
     loadingAuth.set(false);
     return {
-      data: 'hehe'
+      data: 'nothing'
     }
   }
 </script>
