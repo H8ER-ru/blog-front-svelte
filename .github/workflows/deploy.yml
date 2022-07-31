@@ -25,4 +25,4 @@ jobs:
       - run: npm ci
       - run: npm run build
       # Deploy
-      - run: cd build && rsync -e "ssh -i $HOME/.ssh/key -o StrictHostKeyChecking=no" nikita@veras-it.ru:blog-front-svelte && .pm2 restart build/index.js
+      - run: cd build && rsync -e "ssh -i $HOME/.ssh/key -o StrictHostKeyChecking=no" nikita@veras-it.ru:blog-front-svelte && nvm use 16.15.1 && pm2 restart build/index.js
