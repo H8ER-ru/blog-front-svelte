@@ -63,8 +63,6 @@ L
 .github/workflows/deploy.yml,f\1\f130ad0d1d16d0d70ec30d355f736ae3784b05cf
 C
 src/utils/sentry.js,7\4\7445f37f10d222940e41e2e6e4568343fdcab9c0
-G
-src/routes/index.svelte,5\1\51bcc514dca4100151288caa29d812033b5c875a
 A
 package-lock.json,f\a\fa288d1472d29beccb489a676f68739ad365fc47
 J
@@ -74,7 +72,17 @@ J
 .gitignore,a\5\a5cc2925ca8258af241be7e5b0381edf30266302
 ;
 src/app.css,f\8\f84891de375015dbc3259b098070fffaa6c0752c
-W
-'src/lib/components/Header/Header.svelte,6\9\695ced32f13ed9573ecd4a6f07b30092998ad925
 J
 src/routes/__layout.svelte,a\4\a40b258bf0b50036f6b968be9525971d8531305d
+[
++src/lib/components/postCard/PostCard.svelte,5\5\5549688f492bfaed642b0975c6d5de7df69dd445
+<
+package.json,7\0\7030d0b2f71b999ff89a343de08c414af32fc93a
+K
+src/routes/post/[id].svelte,3\0\307dd0a690805e1d8b19b6a8dda3254fb5957ef0
+Y
+)src/lib/components/Forms/LoginForm.svelte,0\9\09e9c236c3190b8be333798ee616d4d63d602117
+a
+1src/lib/components/CreatePost/ToolsButtons.svelte,3\0\30e6e1d9fe3f089c67a779da985692b51617dacb
+S
+#src/routes/create-post/index.svelte,f\9\f95ea7970b1fb19663dc20bb308fa5d0e2f6bbed

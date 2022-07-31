@@ -56,6 +56,7 @@
     bottom: 0
     right: 0
     left: 0
+    z-index: 20
     display: flex
     justify-content: center
     align-items: center

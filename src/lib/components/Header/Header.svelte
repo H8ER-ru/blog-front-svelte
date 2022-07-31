@@ -27,6 +27,7 @@
   })
 
   const openAuthModal = () => {
+    showMobileBurger = false
     openModal(() => import('$lib/components/AuthModal.svelte'), {})
   }
 
