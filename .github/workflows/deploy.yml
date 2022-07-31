@@ -19,10 +19,10 @@ jobs:
       # Setup key
       - run: set -eu
       - run: mkdir "$HOME/.ssh"
-      - run: echo "${{ secrets.key }}" > "$HOME/.ssh/authorized_keys"
-      - run: chmod 600 "$HOME/.ssh/authorized_keys"
+      - run: echo "${{ secrets.key }}" > "$HOME/.ssh/key"
+      - run: chmod 600 "$HOME/.ssh/key"
       # Build
       - run: npm ci
       - run: npm run build
       # Deploy
-      - run: rsync -e "ssh -i $HOME/.ssh/authorized_keys -o StrictHostKeyChecking=no" root@veras-it.ru:/blog-front-svelte && pm2 restart build/index.js
+      - run: cd build && rsync -e "ssh -i $HOME/.ssh/key -o StrictHostKeyChecking=no" nikita@veras-it.ru:/var/www/blog-front && pm2 restart build/index.js
