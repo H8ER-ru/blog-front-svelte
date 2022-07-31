@@ -6,6 +6,8 @@
       class="footer__tg"
     >
       <img
+        height="64"
+        width="64"
         src="/tg.png"
         loading="lazy"
         decoding="async"
@@ -18,6 +20,8 @@
       class="footer__vk"
     >
       <img
+        width="64"
+        height="64"
         src="/vk.png"
         loading="lazy"
         decoding="async"

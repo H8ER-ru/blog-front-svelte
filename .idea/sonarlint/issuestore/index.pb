@@ -76,7 +76,5 @@ J
 src/app.css,f\8\f84891de375015dbc3259b098070fffaa6c0752c
 W
 'src/lib/components/Header/Header.svelte,6\9\695ced32f13ed9573ecd4a6f07b30092998ad925
-W
-'src/lib/components/Footer/Footer.svelte,1\2\12d5d337171449d733b184a77a5ccfb994f1db10
 J
 src/routes/__layout.svelte,a\4\a40b258bf0b50036f6b968be9525971d8531305d
