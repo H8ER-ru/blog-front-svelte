@@ -17,8 +17,6 @@ H
 static/browserconfig.xml,2/b/2b3f58e9d9eb42a7f05d289670454e19aed55008
 O
 src/lib/assets/img/calendar.svg,1/c/1caca861a59305973c1443474f287d025e30c79f
-J
-src/utils/dateConverter.ts,c/2/c2a28b7033d5fcf44464b9bef8b92daf27a0f86f
 L
 static/safari-pinned-tab.svg,7/3/73cffc26c96be74ef8aa2fcf40c6076517c25eba
 P
@@ -51,3 +49,19 @@ b
 	README.md,8\e\8ec9a00bfd09b3190ac6b22251dbb1aa95a0579d
 ;
 src/app.css,f\8\f84891de375015dbc3259b098070fffaa6c0752c
+K
+src/lib/routeGuard/index.ts,7\b\7b5ab7f9fa79739788814bf97fea1e11318b3dbd
+<
+src/app.d.ts,5\0\50d669c9d022d89914a4c9c77a94171b6b438948
+<
+src/app.html,4\3\43f343fa8f8b3d19f33620db6bc88b192afa9d3d
+D
+playwright.config.ts,0\4\0475c304a6e9877385b2ac4598949dcb7dd770e4
+@
+svelte.config.js,9\4\9412e23d6c9b081f2298258aff5115cc43e3308e
+4
+.env,3\c\3c84dcdc6bbe3d7817c49dcdc327b926fea1808a
+F
+src/utils/variables.ts,c\1\c110129f159bf1d60eda2d83f2779ed5629acfb2
+L
+.github/workflows/deploy.yml,f\1\f130ad0d1d16d0d70ec30d355f736ae3784b05cf

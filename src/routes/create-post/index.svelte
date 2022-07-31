@@ -12,6 +12,7 @@
   import { Editor } from '@tiptap/core'
   import StarterKit from '@tiptap/starter-kit'
   import Image from '@tiptap/extension-image'
+  import Link from '@tiptap/extension-link'
   import BaseButton from "../../lib/components/UI/BaseButton.svelte";
   import { localStorageGet } from "../../utils/browserData.js";
   let element
@@ -73,13 +74,18 @@
 
   }
 
+
+  Link.configure({
+    linkOnPaste: false
+  })
   onMount(() => {
 
     editor = new Editor({
       element: element,
       extensions: [
         StarterKit,
-        Image
+        Image,
+        Link,
       ],
       content: '<p>Начало Поста</p>',
       onTransaction: () => {
@@ -242,6 +248,10 @@
           border: 1px solid white
           padding: 2px
           border-radius: 3px
+          cursor: pointer
+          transition: opacity .3s linear
+          &:hover
+            opacity: 0.7
 
       &__content
         font-size: 16px

@@ -15,7 +15,6 @@
   const goToPost = () => {
     return goto(`/post/${id}`)
   }
-  console.log(index);
 
   const tagsList = tags.replaceAll('"', '').split(', ')
 

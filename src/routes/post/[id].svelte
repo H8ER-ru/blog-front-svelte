@@ -127,4 +127,9 @@
         margin-left: 5px
         font-size: 14px
         line-height: 1.2
+    &__content:global
+        code
+          opacity: 0.5
+        p:empty
+          height: 10px
 </style>
