@@ -44,7 +44,7 @@
   .main {
     width: 100%;
     max-width: 1200px;
-    margin: 20px auto;
+    margin: 0 auto 20px auto;
     padding: 0 1rem;
     height: 100%;
     min-height: 100%;

@@ -24,7 +24,6 @@
 <script>
   import { dateConverter } from "../../utils/dateConverter.ts";
   import Tag from "../../lib/components/UI/Tag.svelte";
-  import '$lib/assets/css/content.css'
   import Calendar from '$lib/assets/img/calendar.svg';
 
   export let post
@@ -132,4 +131,10 @@
           opacity: 0.5
         p:empty
           height: 10px
+        p
+          font-size: 1.1rem
+          line-height: 1.5rem
+          margin: 7px 0
+        h2
+          margin: 15px 0 7px 0
 </style>
