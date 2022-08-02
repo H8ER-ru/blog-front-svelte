@@ -76,13 +76,11 @@ J
 src/routes/__layout.svelte,a\4\a40b258bf0b50036f6b968be9525971d8531305d
 [
 +src/lib/components/postCard/PostCard.svelte,5\5\5549688f492bfaed642b0975c6d5de7df69dd445
-<
-package.json,7\0\7030d0b2f71b999ff89a343de08c414af32fc93a
-K
-src/routes/post/[id].svelte,3\0\307dd0a690805e1d8b19b6a8dda3254fb5957ef0
 Y
 )src/lib/components/Forms/LoginForm.svelte,0\9\09e9c236c3190b8be333798ee616d4d63d602117
 a
 1src/lib/components/CreatePost/ToolsButtons.svelte,3\0\30e6e1d9fe3f089c67a779da985692b51617dacb
 S
 #src/routes/create-post/index.svelte,f\9\f95ea7970b1fb19663dc20bb308fa5d0e2f6bbed
+W
+'src/lib/components/Footer/Footer.svelte,1\2\12d5d337171449d733b184a77a5ccfb994f1db10

@@ -188,6 +188,7 @@
     .glitch
       position: relative
       color: white
+      white-space: nowrap
       mix-blend-mode: lighten
       &:before,
       &:after
