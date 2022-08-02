@@ -22,7 +22,8 @@ jobs:
       - run: echo "${{ secrets.key }}" > "$HOME/.ssh/key"
       - run: chmod 600 "$HOME/.ssh/key"
       # Build
+      - run: npm install
       - run: npm ci
       - run: npm run build
       # Deploy
-      - run: cd build && rsync -e "ssh -i $HOME/.ssh/key -o StrictHostKeyChecking=no" nikita@veras-it.ru:blog-front-svelte && source ~/.nvm/nvm.sh use 16.15.1 && npm install pm2 && pm2 restart build/index.js
+      - run: cd build && rsync -e "ssh -i $HOME/.ssh/key -o StrictHostKeyChecking=no" root@veras-it.ru:blog-front-svelte && pm2 restart build/index.js

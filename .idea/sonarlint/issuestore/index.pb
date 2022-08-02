@@ -55,12 +55,8 @@ D
 playwright.config.ts,0\4\0475c304a6e9877385b2ac4598949dcb7dd770e4
 @
 svelte.config.js,9\4\9412e23d6c9b081f2298258aff5115cc43e3308e
-4
-.env,3\c\3c84dcdc6bbe3d7817c49dcdc327b926fea1808a
 F
 src/utils/variables.ts,c\1\c110129f159bf1d60eda2d83f2779ed5629acfb2
-L
-.github/workflows/deploy.yml,f\1\f130ad0d1d16d0d70ec30d355f736ae3784b05cf
 C
 src/utils/sentry.js,7\4\7445f37f10d222940e41e2e6e4568343fdcab9c0
 A
